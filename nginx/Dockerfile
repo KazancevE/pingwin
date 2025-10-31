@@ -1,14 +1,11 @@
 FROM nginx:alpine
 
-# Install certbot
-RUN apk add --no-cache certbot
+# Обновляем индекс пакетов и устанавливаем certbot в один RUN
+RUN apk update && \
+    apk add --no-cache certbot-nginx && \
+    mkdir -p /var/www/certbot /etc/letsencrypt /etc/nginx/ssl
 
-# Create directories
-RUN mkdir -p /var/www/certbot && \
-    mkdir -p /etc/letsencrypt && \
-    mkdir -p /etc/nginx/ssl
-
-# Copy nginx config
+# Копируем nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80 443

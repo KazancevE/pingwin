@@ -2,7 +2,7 @@ FROM nginx:alpine
 
 # Обновляем индекс пакетов и устанавливаем certbot в один RUN
 RUN apk update && \
-    apk add --no-cache certbot-nginx && \
+    # apk add --no-cache certbot-nginx && \
     mkdir -p /var/www/certbot /etc/letsencrypt /etc/nginx/ssl
 
 # Копируем nginx config

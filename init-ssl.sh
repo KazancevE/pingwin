@@ -19,9 +19,9 @@ sleep 10
 # Get initial SSL certificate
 echo "🔐 Requesting SSL certificate..."
 docker-compose run --rm certbot certonly --webroot -w /var/www/certbot \
-    -d your-school.com \
-    -d www.your-school.com \
-    --email admin@your-school.com \
+    # -d your-school.com \
+    # -d www.your-school.com \
+    --email kazanceve.gor@gmail.com \
     --agree-tos \
     --noninteractive
 

@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/school_db
   .catch(err => console.log('❌ MongoDB connection error:', err));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Backend server running on port ${PORT}`);
   console.log(`📞 Health check: http://localhost:${PORT}/api/health`);
 });

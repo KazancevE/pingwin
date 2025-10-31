@@ -22,11 +22,12 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     command: >
-      certbot certonly --webroot -w /var/www/certbot
+      certonly --webroot -w /var/www/certbot
       -d kazancevegor.online -d www.kazancevegor.online
       --email kazanceve.gor@gmail.com --agree-tos --no-eff-email
     networks:
       - app-network
+
 
   backend:
     build: ./backend

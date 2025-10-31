@@ -24,7 +24,7 @@ services:
     command: >
       certbot certonly --webroot -w /var/www/certbot
       -d kazancevegor.online -d www.kazancevegor.online
-      --email you@example.com --agree-tos --no-eff-email
+      --email kazanceve.gor@gmail.com --agree-tos --no-eff-email
     networks:
       - app-network
 

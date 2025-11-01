@@ -36,7 +36,7 @@ services:
     environment:
       - NODE_ENV=production
       - MONGODB_URI=mongodb://mongodb:27017/school_db
-      - JWT_SECRET={JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
       - BOT_TOKEN=${BOT_TOKEN}
       - BOT_WEBHOOK_URL=${BOT_WEBHOOK_URL}
     depends_on:
@@ -51,8 +51,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: {MONGO_ADMIN}
-      MONGO_INITDB_ROOT_PASSWORD: {MONGO_ADMIN_PASS}
+      MONGO_INITDB_ROOT_USERNAME=${MONGO_ADMIN}
+      MONGO_INITDB_ROOT_PASSWORD=${MONGO_ADMIN_PASS}
     command: --bind_ip_all
     volumes:
       - mongodb_data:/data/db

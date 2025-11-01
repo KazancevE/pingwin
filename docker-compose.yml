@@ -58,6 +58,8 @@ services:
       --auth
     volumes:
       - mongodb_data:/data/db
+    networks:
+      - app-network
     restart: unless-stopped
 
   frontend:

@@ -35,7 +35,8 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://mongodb:27017/school_db
+      # - MONGODB_URI=mongodb://mongodb:27017/school_db
+      - MONGODB_URI=mongodb://superAdmin:Otebitesotmenya1@mongodb:27017/school_db?authSource=admin
       - JWT_SECRET=${JWT_SECRET}
       - BOT_TOKEN=${BOT_TOKEN}
       - BOT_WEBHOOK_URL=${BOT_WEBHOOK_URL}

@@ -14,7 +14,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/homework', require('./routes/homework'));
 app.use('/api/groups', require('./routes/groups'));
 app.use('/api/organizations', require('./routes/organizations'));
-app.use('/api/bot', require('./routes/bot'));
+app.use('/api/bot', require('./routes/bot/index'));
 
 app.get('/api/health', (req, res) => {
   res.json({ 
